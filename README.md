@@ -2,13 +2,14 @@
 
 # Overview
 
-The purpose of this analysis is to understand how to utilize `Machine Learning` statistical algorithms to make predictions based on data patterns provided. In this challenge, we focus on **Supervised Learning** using a free dataset from **LendingClub**, a P2P lending service company to evaluate and predict credit risk. This reason why this is called **"Supervised Learning"** is because the data includes a labeled outcome. 
+The purpose of this analysis is to understand how we can utilize `Machine Learning` statistical algorithms in order make predictions based on data patterns provided. In this challenge, we focus on **Supervised Machine Learning** using a dataset (that aleady includes a labeled outcome) from **LendingClub**, a P2P lending service company to evaluate and predict credit risk.
+
 
 To complete this analysis, we use different `Machine Learning` techniques to train and evaluate the data with unbalanced classes. The dataset from the **LendingClub** has an unbalanced classification problem due to the number of good loans outweighing the amount of risky loans. In order balance out the classifications to allow for more meaningful predictions and improve the accuracy score, we needed to employ various `Machine Learning` algorithms to resample the data. These algorithms include `RandomOverSampler`, `SMOTE`, `ClusterCentroids`, `SMOTEENN`, `BalancedRandomForestClassifier`, and `EasyEnsembleClassifier`.
 
 # Results
 
-As mentioned in the overview, we use `Machine Learning` to resample the dataset using `Python` libraries: `scikit-learn` and `imbalanced-learn` evaluate the results and provide a comparison for our analysis. 
+As mentioned in the overview, the use of `Machine Learning` to resample the dataset using `Python` libraries: `scikit-learn` and `imbalanced-learn` evaluate the results and provide a comparison for our analysis. 
 
 The original dataset contained 115,675 loan applications in Q1 of 2019. We used the "loan status" to determine whether the application was considered "low" or "high" risk. Applications that had "current" as the "loan status" were classified as "low risk" and the remaining as "high risk". This reduced the dataset to 68,817 total applications with 99% classified as "low risk". 
 
@@ -156,5 +157,4 @@ In reviewing all six models, the `EasyEnsembleClassifer` model yielded the best 
 * `RandomOverSampler`: 64.0% accuracy, 1% precision, 66% recall and 2% F1 Score
 * `ClusterCentroids`: 54.5% accuracy, 1% precision, 69% recall and 1% F1 Score
 
-A side note that should be considered is that original dataset had 99% of the applications classified as "Low Risk" with only 1% of the data classified in the "High Risk" category. This may skew the results greatly as there is a risk that the `Machine Learning` algorithms are creating clusters drawing from too small of a dataset of actual "High Risk" applications. This margin of risk might not be something that banks would be comfortable accepting.
 
